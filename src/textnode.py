@@ -8,12 +8,6 @@ class TextTypes(Enum):
     CODE = "`code`"
     LINK = "link"
     IMAGE = "image"
-    # PLAIN = "plain text"
-    # BOLD = "**bold text**"
-    # ITALIC = "_italic text_"
-    # CODE = "`code text`"
-    # LINK = "[anchor text](url)"
-    # IMAGES = "![alt text](url)"
 
 class TextNode:
     def __init__(self, text, text_type, url=None):

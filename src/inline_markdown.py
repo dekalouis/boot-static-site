@@ -10,8 +10,6 @@ def text_to_textnodes(text):
     nodes = split_nodes_link(nodes)
     return nodes
 
-# print(text_to_textnodes('This is **text** with an _italic_ word and a `code block` and an ![obi wan image](https://i.imgur.com/fJRm4Vk.jpeg) and a [link](https://boot.dev)'))
-
 def split_nodes_delimiter(old_nodes, delimiter, text_type):
     new_nodes = []
     for old_node in old_nodes:
@@ -43,15 +41,7 @@ def extract_markdown_links(text):
     matches = re.findall(pattern, text)
     return matches
 
-# text = "This is text with a ![rick roll](https://i.imgur.com/aKaOqIh.gif) and ![obi wan](https://i.imgur.com/fJRm4Vk.jpeg)"
-# print(extract_markdown_images(text))
-# # [("rick roll", "https://i.imgur.com/aKaOqIh.gif"), ("obi wan", "https://i.imgur.com/fJRm4Vk.jpeg")]
 
-# text2 = "This is text with a link [to boot dev](https://www.boot.dev) and [to youtube](https://www.youtube.com/@bootdotdev)"
-# print(extract_markdown_links(text2))
-# # [("to boot dev", "https://www.boot.dev"), ("to youtube", "https://www.youtube.com/@bootdotdev")]
-
-# ===
 def split_nodes_image(old_nodes):
     new_nodes = []
     for old_node in old_nodes:
@@ -105,18 +95,4 @@ def split_nodes_link(old_nodes):
             new_nodes.append(TextNode(original_text, TextTypes.PLAIN))
     return new_nodes
 
-# node = TextNode(
-#     "This is text with a link [to boot dev](https://www.boot.dev) and [to youtube](https://www.youtube.com/@bootdotdev)",
-#     TextTypes.PLAIN,
-# )
-# new_nodes = split_nodes_link([node])
-# print(new_nodes)
-# [
-#     TextNode("This is text with a link ", TextTypes.PLAIN),
-#     TextNode("to boot dev", TextTypes.LINK, "https://www.boot.dev"),
-#     TextNode(" and ", TextTypes.PLAIN),
-#     TextNode(
-#         "to youtube", TextTypes.LINK, "https://www.youtube.com/@bootdotdev"
-#     ),
-# ]
 

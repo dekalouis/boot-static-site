@@ -60,15 +60,3 @@ class ParentNode(HTMLNode):
         return f"ParentNode(tag={self.tag}, children={self.children}, props={self.props})"
     
 
-# node = ParentNode(
-#     "p",
-#     [
-#         LeafNode("b", "Bold text"),
-#         LeafNode(None, "Normal text"),
-#         LeafNode("i", "italic text"),
-#         LeafNode(None, "Normal text"),
-#     ],
-# )
-
-# print(node.to_html())
-

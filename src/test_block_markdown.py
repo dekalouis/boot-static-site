@@ -6,9 +6,6 @@ from block_markdown import (
     block_to_block_type,
     BlockType,
     )
-# from htmlnode import HTMLNode, LeafNode, ParentNode
-
-# from textnode import TextNode, TextTypes
 
 class TestBlockMarkdown(unittest.TestCase):
     def test_markdown_to_blocks(self):
