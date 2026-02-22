@@ -49,4 +49,34 @@ class TextNode:
         else:
             raise ValueError(f"Unsupported text type: {text_node.text_type}")
     
+
+    # def split_nodes_delimiter(old_nodes, delimiter, text_type):
+    #     new_nodes = []
+    #     for node in old_nodes:
+    #         if node.text_type != TextTypes.PLAIN:
+    #             new_nodes.append(node)
+    #             continue
+
+    #         parts = node.text.split(delimiter)
+    #         if len(parts) == 1:
+    #             new_nodes.append(node)
+    #             continue
+
+    #         if len(parts) % 2 == 0:
+    #             raise ValueError("Invalid markdown: unmatched delimiter")
+
+    #         for i, part in enumerate(parts):
+    #             if part == "":
+    #                 continue
+    #             if i % 2 == 0:
+    #                 new_nodes.append(TextNode(part, TextTypes.PLAIN))
+    #             else:
+    #                 new_nodes.append(TextNode(part, text_type))
+    #     return new_nodes
     
+
+
+# node = TextNode("This is text with a `code block` word", TextTypes.PLAIN)
+# new_nodes = TextNode.split_nodes_delimiter([node], "`", TextTypes.CODE)
+
+# print(new_nodes)
